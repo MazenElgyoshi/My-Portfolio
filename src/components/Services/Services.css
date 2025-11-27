@@ -1,0 +1,132 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 80px auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
+/* Title */
+.services-tittle {
+  position: relative;
+  text-align: center;
+}
+.services-tittle h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+.services-tittle img {
+  position: absolute;
+  bottom: -10px;
+  right: -20px;
+  width: 120px;
+  z-index: -1;
+}
+
+/* Services Grid */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة على الكبير */
+  gap: 40px;
+  width: 100%;
+}
+
+/* Single Service Card */
+.service-format {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 30px;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: 0.4s;
+  cursor: pointer;
+  background-color: #1f0016;
+}
+
+.service-format h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.service-format h2 {
+  font-size: 36px;
+  font-weight: 800;
+  background: linear-gradient(270deg, #df8908 50.41%, #b415ff 90.25%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-format p {
+  color: #d4d4d4;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 300px;
+}
+
+/* Hover Effect */
+.service-format:hover {
+  border: 2px solid #ff00ff;
+  background-image: linear-gradient(45deg, #3f0028, #582300);
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+/* ============================
+   Responsive
+============================ */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); /* عمودين */
+  }
+
+  .service-format {
+    padding: 50px 20px;
+  }
+
+  .service-format p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .services-tittle h1 {
+    font-size: 60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr; /* عمود واحد */
+    gap: 30px;
+  }
+
+  .service-format {
+    padding: 40px 20px;
+  }
+
+  .service-format h2 {
+    font-size: 30px;
+  }
+
+  .service-format h3 {
+    font-size: 22px;
+  }
+
+  .service-format p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 100%;
+  }
+
+  .services-tittle h1 {
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,149 @@
+/* ======== CONTAINER ======== */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 70px; /* كبرنا البادينج */
+  gap: 70px;
+  max-width: 1400px; /* كبرنا الماكس */
+  margin: 0 auto;
+}
+
+/* ======== TITLE ======== */
+.contact-tittle {
+  position: relative;
+  text-align: center;
+}
+.contact-tittle h1 {
+  font-size: clamp(45px, 6vw, 75px); /* كبرنا الخط */
+  font-weight: 700;
+}
+.contact-tittle img {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: clamp(70px, 10vw, 140px);
+  z-index: -1;
+}
+
+/* ======== SECTION ======== */
+.contact-section {
+  display: flex;
+  gap: 180px; /* كبرنا المسافة بين النص والفورم */
+  justify-content: center;
+  align-items: start;
+}
+
+/* LEFT SIDE */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px; /* كبرنا النص شويه */
+}
+.contact-left h1 {
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 700;
+  background: linear-gradient(270deg, #df8908 80%, #b415ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-left p {
+  font-size: 19px;
+  line-height: 32px;
+  color: #d8d8d8;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 19px;
+}
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #e0e0e0;
+}
+
+/* RIGHT SIDE - FORM */
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 500px; /* كبرنا الفورم شويه */
+  width: 100%;
+}
+.contact-right label {
+  font-size: 17px;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 14px 18px; /* كبرنا البادينج */
+  border: none;
+  border-radius: 8px;
+  background: #32323c;
+  color: #a0a0a0;
+  font-size: 17px;
+  font-family: Outfit;
+}
+.contact-right textarea {
+  min-height: 160px; /* كبرنا الارتفاع */
+}
+.contact-right input:focus,
+.contact-right textarea:focus {
+  outline: 2px solid #b415ff;
+  background: #3a3a46;
+}
+
+/* BUTTON */
+.contact-right button {
+  padding: 16px 45px;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  font-size: 19px;
+  background: linear-gradient(264deg, #df8908, #b415ff);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.contact-right button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column; /* يصبح عمودي على الموبايل */
+    gap: 30px;
+  }
+  .contact-left h1 {
+    font-size: clamp(28px, 7vw, 50px);
+  }
+  .contact-left p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .contact-details {
+    font-size: 16px;
+    gap: 12px;
+  }
+  .contact-right input,
+  .contact-right textarea {
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+  .contact-right textarea {
+    min-height: 120px;
+  }
+  .contact-right button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
